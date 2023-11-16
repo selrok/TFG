@@ -1,0 +1,83 @@
+@charset "UTF-8";
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: #EBE1C9;
+}
+
+.barraInicio {
+  background-color: #3498db;
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.contenido {
+  margin-top: 13vh;
+  width: 100%;
+}
+
+.categorias {
+  display: flex;
+  justify-content: center;
+}
+
+.categorias div {
+  flex: 0 0 calc(15% - 14px);
+  margin: 10px;
+  text-align: center;
+  line-height: 3;
+  background-color: #ecf0f1;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+.categorias div img {
+  width: 50%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.categorias div:hover {
+  background-color: #bdc3c7;
+}
+
+.contenidoTarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tarjeta {
+  width: calc(20% - 20px); /* Ajusta el ancho según la cantidad deseada por fila */
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 15px;
+  background-color: #f4f4f4;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.5s ease;
+}
+
+.tarjeta:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta img {
+  width: 100%;
+  border-bottom: 1px solid #3498db;
+}
+
+.tarjeta h5, .tarjeta p {
+  margin: 15px;
+}/*# sourceMappingURL=pagPrin.css.map */
