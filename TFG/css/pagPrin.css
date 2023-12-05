@@ -1,0 +1,177 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Pacifico";
+  src: url("../font/Pacifico-Regular.ttf");
+}
+@font-face {
+  font-family: "One";
+  src: url("../font/LeckerliOne-Regular.ttf");
+}
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: "Pacifico";
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  background-color: #EBE1C9;
+}
+
+.barraInicio {
+  background-color: rgba(52, 152, 219, 0.7058823529);
+  color: #fff;
+  font-family: "One";
+  padding: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 10vh;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.barraInicio h1#title {
+  font-size: 4vh;
+  margin: 0;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.barraInicio div.buscador {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.barraInicio div.buscador .lupa {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+.barraInicio div.buscador .lupa span.circulo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  border: 2px solid #333;
+}
+.barraInicio div.buscador .lupa span.barra {
+  position: absolute;
+  top: 82%;
+  left: 88%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 35%;
+  height: 7%;
+  background-color: #333;
+}
+.barraInicio div.usuario {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+.barraInicio div.usuario .cabeza {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: #222c33; /* Puedes ajustar el color según tus preferencias */
+  border-radius: 50%;
+}
+.barraInicio div.usuario .cuerpo {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%; /* Ancho del cuerpo */
+  height: 40%; /* Mitad del alto del cuerpo */
+  background-color: #222c33; /* Puedes ajustar el color según tus preferencias */
+  border-radius: 10px 10px 0 0; /* Aplica un borde redondeado solo en la parte superior */
+}
+
+.contenido {
+  margin-top: 13vh;
+  width: 100%;
+}
+
+.categorias {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Agregado para gestionar el wrap de las categorías */
+  margin: 0 -10px; /* Ajuste para compensar el padding negativo de los hijos */
+}
+.categorias .col-md-4 {
+  flex: 0 0 calc(15% - 20px);
+  margin: 10px;
+  text-align: center;
+  line-height: 3;
+  background-color: #ecf0f1;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+.categorias .col-md-4 h6 {
+  font-size: 1.9vh;
+}
+.categorias .col-md-4 img {
+  width: 50%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.categorias .col-md-4:hover {
+  transform: scale(1.05);
+}
+@media screen and (max-width: 767px) {
+  .categorias .col-md-4 {
+    flex: 0 0 calc(50% - 20px); /* Ajuste para dispositivos móviles */
+    margin: 5px; /* Espaciado entre las categorías en dispositivos móviles */
+  }
+}
+
+.categorias div:hover {
+  background-color: #bdc3c7;
+}
+
+.contenidoTarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tarjeta {
+  width: calc(20% - 20px); /* Ajuste para dispositivos mayores a 767px */
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 15px;
+  background-color: #f4f4f4;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.tarjeta img {
+  width: 100%;
+  border-bottom: 1px solid #3498db;
+}
+.tarjeta h5, .tarjeta p {
+  margin: 5%;
+  font-size: 1.9vh;
+}
+.tarjeta:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+@media screen and (max-width: 767px) {
+  .tarjeta {
+    width: 100%; /* Ajuste para dispositivos móviles */
+  }
+}/*# sourceMappingURL=pagPrin.css.map */
